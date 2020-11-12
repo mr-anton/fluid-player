@@ -201,7 +201,7 @@ export default function (playerInstance, options) {
          * Sends requests to the tracking URIs
          */
         const videoPlayerTimeUpdate = () => {
-            if (playerInstance.adFinished) {
+            if (playerInstance.adPool[adListId].adFinished) {
                 playerInstance.domRef.player.removeEventListener('timeupdate', videoPlayerTimeUpdate);
                 return;
             }
